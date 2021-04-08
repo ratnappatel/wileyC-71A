@@ -1,23 +1,23 @@
 package com.wiley.exceptions;
 
 
-	class OneException extends Exception {
+class OneException extends Exception {
 	    public OneException(String s) {
 	        super(s);
 	    }
 	}
 
-	class TwoException extends Exception {
+class TwoException extends Exception {
 	    public TwoException(String s) {
 	        super(s);
 	    }
 	}
 
-	public class RethrowException {
+public class RethrowException {
 	    
 	    public static void someMethod() throws OneException {
 	        System.out.println("originating the exception in someMethod()");
-	        throw new OneException("thrown from f()");
+	        throw new OneException("thrown from f()"); // custom -exception : checked either throws / try_catch
 	    }
 	    
 	    public static void main(String[] args) throws TwoException {
@@ -30,6 +30,7 @@ package com.wiley.exceptions;
 	            // The TwoException will be handled by default exception
 	            // handler.
 	            throw new TwoException("from main()");
+	           // System.out.println("");
 	        }
 	    }
 	} 
