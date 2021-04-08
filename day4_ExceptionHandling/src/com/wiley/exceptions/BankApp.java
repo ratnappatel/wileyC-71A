@@ -1,5 +1,7 @@
 package com.wiley.exceptions;
 
+import java.util.Scanner;
+
 public class BankApp {
 
 	private int age;
@@ -20,9 +22,15 @@ public class BankApp {
 		BankApp mayur=new BankApp(28, "Mayur");
 		BankApp uttam=new BankApp(12,"Uttam");
 		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Your Details....");
+		int age=sc.nextInt();
+		String name=sc.next();
+		BankApp b1=new BankApp(age,name);
 		try {
-			mayur.processRequest();
-			uttam.processRequest();
+			b1.processRequest();
+			/*mayur.processRequest();
+			uttam.processRequest();*/
 		} catch (AgeException e) {
 			System.out.println(e);
 		}

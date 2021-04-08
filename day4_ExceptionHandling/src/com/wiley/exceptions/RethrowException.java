@@ -15,15 +15,20 @@ class TwoException extends Exception {
 
 public class RethrowException {
 	    
-	    public static void someMethod() throws OneException {
+	    public static void someMethod() throws OneException
+	    {
 	        System.out.println("originating the exception in someMethod()");
 	        throw new OneException("thrown from f()"); // custom -exception : checked either throws / try_catch
 	    }
 	    
-	    public static void main(String[] args) throws TwoException {
-	        try {
+	    public static void secondMethod() throws TwoException  
+	    {
+	    	System.out.println(" started...");
+	        try 
+	        {
 	            someMethod();
-	        } catch (OneException e) {
+	        } 
+	        catch (OneException e) {
 	            System.err.println("Caught in main, e.printStackTrace()");
 	            e.printStackTrace();
 	            
@@ -32,5 +37,15 @@ public class RethrowException {
 	            throw new TwoException("from main()");
 	           // System.out.println("");
 	        }
+	        
+	    }
+	    public static void main(String[] args) throws TwoException {
+	    	try {
+				secondMethod();
+			} catch (TwoException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} // optional to handle re-thrown exception
+	    	System.out.println("Main Exited...");
 	    }
 	} 
