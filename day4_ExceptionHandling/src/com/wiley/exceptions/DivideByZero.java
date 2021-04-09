@@ -1,8 +1,8 @@
 package com.wiley.exceptions;
 
-public class DivideByZero {    
- 
-    public static void main(String[] args) {
+public class DivideByZero {
+
+	public static void main(String[] args) {
        int a=0,b=0;
     	
     	int c=0;
@@ -14,11 +14,11 @@ public class DivideByZero {
 			System.out.println("c = "+c);
 			
 		}
-    	catch(Exception e)
+    	/*catch(Exception e)
     	{
     		System.out.println(e);   // default exception handler will execute 
     	}
-		/*
+		
 		 * catch(Exception e) { System.out.println(e.getMessage());
 		 * 
 		 * if(e instanceof ArithmeticException)
@@ -26,22 +26,23 @@ public class DivideByZero {
 		 * ArrayIndexOutOfBoundsException)
 		 * System.out.println("You Must pass atleast Two arguments."); else
 		 * System.out.println("You must enter valid nos"); }
-		 */
+		 
     	finally
     	{
     		System.out.println("I am releasing all unused resources....");
-    	}
-		/*
-		 * catch (ArithmeticException e) {
-		 * System.out.println("You must enter both argument > 0"); } catch
-		 * (ArrayIndexOutOfBoundsException e) {
-		 * System.out.println("You Must pass atleast Two arguments."); } catch
-		 * (NumberFormatException e) { System.out.println("You must enter valid nos"); }catch(Excepiton e){System.out.println(e);}
-		 */
+    	}*/
+		
+		  catch (ArithmeticException e) {
+		  System.out.println("You must enter both argument > 0"); } catch
+		  (ArrayIndexOutOfBoundsException e) {
+		  System.out.println("You Must pass atleast Two arguments."); } catch
+		  (NumberFormatException e) { System.out.println("You must enter valid nos"); }
+    		
+		 
     	
     	System.out.println("try exiting...");
     	
     	System.out.println("Main Exited....");
     }
-   
+
 }

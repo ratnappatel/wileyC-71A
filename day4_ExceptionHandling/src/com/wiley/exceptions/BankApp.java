@@ -16,7 +16,7 @@ public class BankApp {
 		if(age>21)
 			System.out.println("Your Service Request Submitted Successfully\nYour ServiceRequest No is : SR"+(int)(Math.random()*1000000));
 		else
-			throw new AgeException();
+			throw new AgeException(age);
 	}
 	public static void main(String[] args) {
 		BankApp mayur=new BankApp(28, "Mayur");

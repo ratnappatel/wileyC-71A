@@ -1,4 +1,4 @@
-package com.wiley.dst.arraylist;
+package com.wiley.dst.linkedlist;
 
 public class Main {
 
