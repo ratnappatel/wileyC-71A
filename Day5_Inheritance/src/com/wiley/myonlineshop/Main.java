@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
        
         // Declare and create Product array of size 5
-        Product[] pa = new Product[5];
+        Product[] pa = new Product[5]; //items
        
         // Create object instances
         pa[0] = new TV(1000, "Samsung", 30);
