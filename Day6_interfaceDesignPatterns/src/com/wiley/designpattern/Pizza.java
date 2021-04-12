@@ -16,9 +16,11 @@ public class Pizza {
 		
 	}
 	public static void main(String[] args) {
-		Pizza p1=new Pizza(veg_pizza.customization(olive_oil,mashroom,mediumspicy),cheese());
-		p2=new Pizza(size.large,20gmcheese,250 gm veges ,) 180
-		p1.type="non-veg";
+		/*
+		 * Pizza p1=new
+		 * Pizza(veg_pizza.customization(olive_oil,mashroom,mediumspicy),cheese());
+		 * p2=new Pizza(size.large,20gmcheese,250 gm veges ,) 180 p1.type="non-veg";
+		 */
 
 	}
 

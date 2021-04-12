@@ -5,7 +5,7 @@ public class Volume {
 	public static void main(String args[])
 	{
 		Box b=new Box(12,56,89);
-		System.out.println("The Volume of Box is: "+b.vol);
+		//System.out.println("The Volume of Box is: "+b.vol);
 	}
 
 }
