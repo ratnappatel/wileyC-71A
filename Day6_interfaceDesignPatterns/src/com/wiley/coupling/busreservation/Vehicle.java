@@ -3,7 +3,7 @@ package com.wiley.coupling.busreservation;
 public interface Vehicle {
 
 	private  void  put() {System.out.println("Private Function in Interfacess");}
-	public default void get()  // defining a method
+	public  default void get()  // defining a method
 	{
 		put();
 		func1();
