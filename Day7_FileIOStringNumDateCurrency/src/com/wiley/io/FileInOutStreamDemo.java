@@ -1,18 +1,27 @@
 package com.wiley.io;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+
+
 public class FileInOutStreamDemo {
 
 	byte arr[];
+	File f;
+	public FileInOutStreamDemo()
+	{
+		f=new File("MyText.txt");
+	}
 	public void readData()
 	{
+		
 		FileInputStream fis=null;
 		try
 		{
-			fis=new FileInputStream("MyText.txt");
+			fis=new FileInputStream(f); // MYTEXT MUST BE PRESENT IN CURRENT PROJECT DIRECTORY/ DEFAULT DIRECTORY
 			arr=new byte[100];
 			fis.read(arr);
 			System.out.println(new String(arr));
@@ -32,11 +41,10 @@ public class FileInOutStreamDemo {
 		}
 	}
 	public void writeData() throws Exception
-
 	{
-		FileOutputStream fos=new FileOutputStream("MyText.txt",true);
-		String msg="I should be written to file ..";
-		arr=msg.getBytes();
+		FileOutputStream fos=new FileOutputStream(f,true);
+		String msg=" Its better to learn by example ..";
+		arr=msg.getBytes(); // is a method from String class converts String to byte array 
 		fos.write(arr);
 	}
 	public static void main(String[] args) throws Exception {

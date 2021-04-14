@@ -41,16 +41,11 @@ public class Employee {
 		
 		return hashcode; // for me both object are same
 	}
-	@Override
-	public boolean equals(Object obj)
-	{
-		Employee e=(Employee)obj;
-		if(this.id==e.getId())
-			if(this.firstName.equals(e.getFirstName()))
-				if(this.lastName.equals(e.getLastName()))
-					return true;
-		return false;
-	}
+	
+	  @Override public boolean equals(Object obj) { Employee e=(Employee)obj;
+	  if(this.id==e.getId()) if(this.firstName.equals(e.getFirstName()))
+	  if(this.lastName.equals(e.getLastName())) return true; return false; }
+	 
 	
 
 }

@@ -22,18 +22,18 @@ public class EmployeeArrayListDemo {
 		 * 
 		 * System.out.println("\n"+emps.get(4));
 		 */
-		/*
-		 * try { emps.remove(new Employee(4,"pinakin","patel")); } catch (Exception e) {
-		 * System.out.println(e); }
-		 * System.out.println("After Removing Employee with id 4");
-		 * System.out.println(emps);
-		 * 
-		 * System.out.println(
-		 * "\n**********************************************************************\n")
-		 * ; Employee employees[]=emps.toArray();
-		 * 
-		 * for(Employee e:employees) System.out.println(e);
-		 */
+		
+		  try { emps.remove(new Employee(4,"pinakin","patel")); } catch (Exception e) {
+		  System.out.println(e); }
+		  System.out.println("After Removing Employee with id 4");
+		  System.out.println(emps);
+		  
+		  System.out.println(
+		  "\n**********************************************************************\n")
+		  ; Employee employees[]=emps.toArray();
+		  
+		  for(Employee e:employees) System.out.println(e);
+		 
 		
 		emps.add(4,new Employee(4,"Uttam","Patel"));
 		System.out.println("\n---------------------------------------------------------------------------\n");

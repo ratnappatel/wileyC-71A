@@ -28,8 +28,6 @@ interface Four4
 	public void let();
 }
 
-
-
 interface One1
 {
 	// fields static , final 

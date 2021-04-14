@@ -5,10 +5,10 @@ import java.io.FileReader;
 public class ReaderDemo {
 	public static void readData() throws Exception
 	{
-		@SuppressWarnings("resource")
+		//("resource")
 		FileReader fr=new FileReader("charData.txt");
 		
-		while(fr.read()!=-1) // i<arr.length =A
+		while(fr.read()!=-1) // i<arr.length =A EOF =-1
 		{
 			System.out.println("ASCII : "+fr.read()); //=B
 			System.out.println("CHAR : "+(char)fr.read());

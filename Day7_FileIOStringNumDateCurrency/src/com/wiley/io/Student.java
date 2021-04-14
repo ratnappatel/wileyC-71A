@@ -2,6 +2,7 @@ package com.wiley.io;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -45,15 +46,21 @@ public class Student {
 		{
 			//File file=new File("studentList.doc");
 			DataInputStream dis=new DataInputStream(new FileInputStream(file));
-			id=dis.readInt();
-			name=dis.readUTF();
-			System.out.println("Student Details from studentList.doc file is as below:");
-			System.out.println("Student Id: "+id);
-			System.out.println("Student Name: "+name);
+			while(true)
+			{
+				id=dis.readInt();
+				name=dis.readUTF();
+				System.out.println("Student Details from studentList.doc file is as below:");
+				System.out.println("Student Id: "+id);
+				System.out.println("Student Name: "+name);
+			}
 		}
 		catch(Exception e)
 		{
-			e.printStackTrace();
+			if(e instanceof EOFException)
+				System.out.println("No More Records To Read..");
+			else
+				e.printStackTrace();
 		}
 	}
 	public static void main(String[] args) {
