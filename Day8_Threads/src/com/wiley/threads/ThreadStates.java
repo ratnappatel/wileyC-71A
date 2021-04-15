@@ -5,7 +5,10 @@ public class ThreadStates {
 	    public void run() {
 	      try {
 	        sleep(2);                                  // (2)
-	        for(int i = 5; i > 0; i--);            // (3)
+	        for(int i = 5; i > 0; i--)
+	        	{
+	        		System.out.println(t1.getState());
+	        	}        // (3)
 	      } catch (InterruptedException ie){
 	        ie.printStackTrace();
 	      }

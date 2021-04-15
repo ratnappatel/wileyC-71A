@@ -17,7 +17,7 @@ public class Matrix {
 			}
 		}
 		this.x=x;
-		flag=true;
+		flag=true; // Thread.wait(1000) +time to execute run method
 		System.out.println("Data Deliverd : "+x);
 		notify();
 	}
