@@ -9,6 +9,7 @@ public class Data {
 		{
 			System.out.println("Deadlock Occured....");
 		}
+		d1.display2(d1);
 	}
 	void display2(Data d2)
 	{
@@ -17,5 +18,6 @@ public class Data {
 		{
 			System.out.println("Deadlock Occured....");
 		}
+		d2.display1(d2);
 	}
 }
