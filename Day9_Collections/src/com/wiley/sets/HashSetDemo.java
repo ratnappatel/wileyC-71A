@@ -20,6 +20,25 @@ public class HashSetDemo {
 		hs.add("Ketan");
 		
 		System.out.println(hs);
+		
+		
+		HashSet<Integer> nos=new HashSet<Integer>();
+		nos.add(35);
+		nos.add(76);
+		nos.add(16); // double 
+		nos.add(35);
+		nos.add(76);
+		nos.add(16);
+		
+		System.out.println(nos);
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
