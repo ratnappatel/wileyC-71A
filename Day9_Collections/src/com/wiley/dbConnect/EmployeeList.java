@@ -15,7 +15,7 @@ public class EmployeeList {
 		emps=new ArrayList<Employee>();
 		 con=new DBConnect();
 	}
-	public void addEmployees()
+	public ArrayList<Employee> addEmployees()
 
 	{
 		res=con.getEmployees();
@@ -34,6 +34,7 @@ public class EmployeeList {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return emps;
 		
 	}
 	

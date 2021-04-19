@@ -18,9 +18,10 @@ public class DBConnect {
 		{
 			 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hr", "root", "Mysql@123");
 			 stat=con.createStatement();
-			 int id=50;
+			 int id=50,id1=30;
 			 res=stat.executeQuery("select employee_id,first_name,"
-					+ "last_name,salary,department_id from employees where department_id="+id);
+					+ "last_name,salary,department_id from employees"
+					+ " where department_id in ("+id+","+id1+")");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
