@@ -13,6 +13,9 @@ import static java.util.Comparator.comparing;
 import static java.util.Map.*;
 import static java.util.stream.Collectors.*;
 
+/*EXERCISE #9
+
+Group the movies by the year and list them:*/
 
 public class Exercise9 {
 

@@ -14,6 +14,11 @@ import static java.lang.System.out;
 import static java.util.Comparator.*;
 import static java.util.stream.Collectors.*;
 
+/*
+EXERCISE #6
+
+Find the highest populated capital city of each continent:
+*/
 public class Exercise6 {
 
     public static void main(String[] args) {

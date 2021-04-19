@@ -10,7 +10,11 @@ import com.example.domain.Movie;
 import com.example.service.InMemoryMovieService;
 import com.example.service.MovieService;
 
+/*EXERCISE #3
 
+Find the number of movies of each director: Try to solve this problem by 
+assuming that Director class has not the member movies. 
+*/
 public class Exercise3 {
 
     public static void main(String[] args) {

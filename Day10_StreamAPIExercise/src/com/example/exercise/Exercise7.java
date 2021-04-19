@@ -13,6 +13,10 @@ import static java.lang.System.out;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
+/*EXERCISE #7
+
+Sort the countries by number of their cities in desending order:
+	*/
 public class Exercise7 {
 
     public static void main(String[] args) {

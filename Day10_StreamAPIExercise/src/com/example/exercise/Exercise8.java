@@ -14,7 +14,10 @@ import static java.lang.System.out;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
+/*EXERCISE #8
 
+Find the list of movies having the genres "Drama" and "Comedy" only:
+	*/
 public class Exercise8 {
 
     public static void main(String[] args) {

@@ -14,7 +14,11 @@ import com.example.dao.CountryDao;
 import com.example.dao.InMemoryWorldDao;
 import com.example.domain.City;
 
+/*
+EXERCISE #2
 
+Find the most populated city of each continent:
+*/
 public class Exercise2 {
 
     public static void main(String[] args) {

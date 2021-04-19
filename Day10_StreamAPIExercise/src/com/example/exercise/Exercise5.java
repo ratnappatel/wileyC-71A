@@ -13,6 +13,9 @@ import static java.lang.System.out;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.maxBy;
 
+/*EXERCISE #5
+
+Find the highest populated capital city:*/
 
 public class Exercise5 {
 

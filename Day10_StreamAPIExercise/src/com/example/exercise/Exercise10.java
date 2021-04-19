@@ -11,6 +11,10 @@ import java.util.function.Predicate;
 import static java.lang.System.out;
 import static java.util.Comparator.comparingDouble;
 
+/*EXERCISE #10
+
+Sort the countries by their population densities
+in descending order ignoring zero population countries:*/
 
 public class Exercise10 {
 

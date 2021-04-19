@@ -12,8 +12,11 @@ import com.example.service.MovieService;
 
 import static java.util.stream.Collectors.*;
 
+/*
+EXERCISE #4
 
-public class Exercise4 {
+Find the number of genres of each director's movies:
+*/public class Exercise4 {
 
     public static void main(String[] args) {
         // Find the number of genres of each director's movies
