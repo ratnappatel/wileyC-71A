@@ -19,6 +19,8 @@ public class ArrayStreamDemo {
 			//List<Integer> list=stream1.distinct().filter(e->e%2==0).collect(Collectors.toList());
 			
 			Set<Integer> nos=stream1.collect(Collectors.toSet());
+			stream1.filter(i->i%2==0).forEach(System.out::println);
+			
 			
 			System.out.println(nos);
 			//forEach(e->System.out.println(e));
