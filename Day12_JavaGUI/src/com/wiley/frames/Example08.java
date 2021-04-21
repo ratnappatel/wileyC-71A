@@ -37,6 +37,7 @@ public class Example08 {
 	        JTextField tf = new JTextField(10); // accepts upto 10 characters
 	        JButton send = new JButton("Send");
 	        JButton reset = new JButton("Reset");
+	        
 	        panel.add(label); // Components Added using Flow Layout
 	        panel.add(label); // Components Added using Flow Layout
 	        panel.add(tf);

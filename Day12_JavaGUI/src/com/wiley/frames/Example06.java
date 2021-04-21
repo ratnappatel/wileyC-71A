@@ -9,9 +9,12 @@ public class Example06 {
 	Example06(){
 	JFrame a  = new JFrame("example");
 	DefaultListModel<String> l = new DefaultListModel< >();
+	
 	l.addElement("first item");
 	l.addElement("second item");
+	
 	JList<String> b = new JList< >(l);
+	
 	b.setBounds(100,100,75,75);
 	a.add(b);
 	a.setSize(400,400);
