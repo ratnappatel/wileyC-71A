@@ -41,11 +41,11 @@ public class AddStudent {
 			System.out.println("Enter Student Name.");
 			name=sc.next();
 			
-			pre=con.prepareStatement("insert into student1 values(?,?)");
+			pre=con.prepareStatement("insert into student values(?,?)");
 			pre.setInt(1, rollno);
 			pre.setString(2,name);
 			
-			int ra=pre.executeUpdate();
+			int ra=pre.executeUpdate(); // for dml operation call executeUpdate
 			if(ra>0)
 				System.out.println("Student Details Committed..");
 			else
@@ -60,11 +60,12 @@ public class AddStudent {
 	}
 	public void printStudentDetails()
 
+
 	{
 		try
 		{
 			stat=con.createStatement();
-			res=stat.executeQuery("select * from student1");
+			res=stat.executeQuery("select * from student");
 			while(res.next())
 			{
 				System.out.println("Rollno : "+res.getInt("rollno"));
@@ -78,14 +79,12 @@ public class AddStudent {
 		}
 	}
 	public void updateStudentDetails()
-
-
 	{
 		try
 		{
-			pre=con.prepareStatement("update student1 set name=? where rollno=?");
+			pre=con.prepareStatement("update student set name=? where rollno=?");
 			pre.setString(1, "ghanu");
-			pre.setInt(2,679);
+			pre.setInt(2,11);
 			int ra=pre.executeUpdate();
 			if(ra>0)
 				System.out.println("Name updated for rollno 111");
@@ -123,11 +122,10 @@ public class AddStudent {
 		AddStudent uttam=new AddStudent();
 		uttam.insert();
 		uttam.printStudentDetails();
-		System.out.println("=======================================================");
-		uttam.updateStudentDetails();
-		uttam.printStudentDetails();
-		uttam.deleteStudentDetails();
-		uttam.printStudentDetails();
+		 System.out.println("=======================================================");
+		 uttam.updateStudentDetails(); uttam.printStudentDetails();
+		 // uttam.deleteStudentDetails(); uttam.printStudentDetails();
+		 
 	}
 
 }

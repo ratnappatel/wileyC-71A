@@ -18,7 +18,7 @@ public class CreateTable {
 			
 			
 			// this statement will fire your query to the database. false ==table created
-			boolean result=stat.execute();
+			boolean result=stat.execute(); // 
 			System.out.println(result);
 			if(!result)
 				System.out.println("Table Created....");

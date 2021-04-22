@@ -24,6 +24,7 @@ public class ActionDemo implements ActionListener,ItemListener{
 	JRadioButton rb1,rb2;
 	JCheckBox c1,c2,c3;
 	ButtonGroup bgroup;
+	int i=100;
 	public ActionDemo() {
 		
 		f1=new JFrame("Event Example");
@@ -73,7 +74,7 @@ public class ActionDemo implements ActionListener,ItemListener{
 		String input=null,gender=null,l="";
 		if(ae.getSource() == b1)
 		{
-			input=t1.getText();
+			input=t1.getText(); //NAME +STATIC INT I++
 			if(rb1.isSelected())
 				gender="Female";
 			else if(rb2.isSelected())
