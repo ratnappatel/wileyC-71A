@@ -106,6 +106,7 @@ public class DynamicComboBox extends JFrame implements ItemListener {
 			}
 		
 			Set<String> keys=cityArea.keySet();
+			
 			for(String str:keys)
 				city.addItem(str);
 		}
