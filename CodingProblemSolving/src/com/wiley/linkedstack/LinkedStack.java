@@ -5,7 +5,7 @@ import java.util.ListIterator;
 
 public class LinkedStack {
 
-    private LinkedList<Employee> stack;
+    private LinkedList<Employee> stack; // doubly linked list
 
     public LinkedStack() {
         stack = new LinkedList<Employee>();

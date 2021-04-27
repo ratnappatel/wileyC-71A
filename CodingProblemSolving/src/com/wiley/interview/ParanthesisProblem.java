@@ -58,7 +58,7 @@ public class ParanthesisProblem {
 		// Driver code
 		public static void main(String[] args)
 		{
-			String expr = "([{}])";
+			String expr = "(()())"; // stack ( , (  ,
 
 			// Function call
 			if (areBracketsBalanced(expr))

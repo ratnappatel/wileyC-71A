@@ -12,13 +12,18 @@ public class Main {
         stack.push(new Employee("Mike", "Wilson", 3245));
         stack.push(new Employee("Bill", "End", 78));
 
-        //stack.printStack();
+        stack.printStack();
+        System.out.println("================================================================");
 
         System.out.println(stack.peek());
         //stack.printStack();
 
         System.out.println("Popped: " + stack.pop());
-        System.out.println(stack.peek());
+        stack.printStack();
+        System.out.println("================================================================");
+        
+        System.out.println("Peeked : "+stack.peek());
+        stack.printStack();
 
 
     }
