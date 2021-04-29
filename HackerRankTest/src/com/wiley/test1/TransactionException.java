@@ -11,5 +11,9 @@ public class TransactionException extends Exception {
 	{
 		return errorCode;
 	}
+	public String toString()
+	{
+		return errorCode+" : "+errorMessage;
+	}
 }
 

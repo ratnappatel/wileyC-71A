@@ -11,7 +11,7 @@ public class DigitalWallet {
 		this.username = username;
 		this.userAccessCode = userAccessCode;
 	}
-	public DigitalWallet(String walletId, String userName) {
+	public DigitalWallet(String walletId, String username) {
 		super();
 		this.walletId = walletId;
 		this.username = username;
@@ -22,7 +22,9 @@ public class DigitalWallet {
 	public String getUsername() {
 		return username;
 	}
-	public String getUserAccessToken() {
+	public String getUserAccessToken()throws TransactionException {
+		if(userAccessCode==null)
+			throw new TransactionException("User not authorized", "USER_NOT_AUTHORIZED");
 		return userAccessCode;
 	}
 	public int getWalletBalance() {
@@ -36,7 +38,7 @@ public class DigitalWallet {
 	}
 	@Override
 	public String toString() {
-		return walletId + username + walletBalance;
+		return walletId +"  "+ username +"  "+ walletBalance;
 	}
 	
 	

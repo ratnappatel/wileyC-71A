@@ -13,6 +13,7 @@ public class MainDigitWallet {
 		try 
 		{
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("No.of Wallets to be created");
 			int n=Integer.parseInt(br.readLine());
 			wallets=new DigitalWallet[n];
 			
@@ -41,15 +42,12 @@ public class MainDigitWallet {
 			System.out.println("How Many Transaction are needed to perform..");
 			n=Integer.parseInt(br.readLine());
 			
-			String ts[]=new String[10];
+			String ts[]=new String[n];
 			for(int j=0;j<n;j++)
-			{
-				String t=br.readLine();
-				ts[j]=t;
-			}
+					ts[j]=br.readLine();
+					
 			
-			
-			for(int j=0;j<ts.length;j++)
+			for(int j=0;j<n;j++)
 			{
 				st=new StringTokenizer(ts[j]," ");
 				while(st.hasMoreTokens())
@@ -59,17 +57,35 @@ public class MainDigitWallet {
 						if(wallets[0].getUserAccessToken()!=null)
 						{
 							if(st.nextToken().equalsIgnoreCase("pay"))
-								DigitalWalletTransaction.payMoney(wallets[0]
-										, Integer.parseInt(st.nextToken()));
+							{
+								try {
+									DigitalWalletTransaction.payMoney(wallets[0]
+											, Integer.parseInt(st.nextToken()));
+								} catch (Exception e) {
+									System.out.println(e);
+								}
+								
+							}
 							else if(st.nextToken().equalsIgnoreCase("add"))
-								DigitalWalletTransaction.addMoney(wallets[0]
-										, Integer.parseInt(st.nextToken()));
+								try {
+									DigitalWalletTransaction.addMoney(wallets[0]
+											, Integer.parseInt(st.nextToken()));
+								} catch (Exception e) {
+									System.out.println(e);
+								}
 						}
 					}
 					else if(st.nextToken().equals("2"))
 					{
-						if(wallets[0].getUserAccessToken()==null)
-							throw new TransactionException("User not authorized", "USER_NOT_AUTHORIZED");
+						if(wallets[1].getUserAccessToken()!=null)
+						{
+							if(st.nextToken().equalsIgnoreCase("pay"))
+									DigitalWalletTransaction.payMoney(wallets[1]
+											, Integer.parseInt(st.nextToken()));
+								else if(st.nextToken().equalsIgnoreCase("add"))
+									DigitalWalletTransaction.addMoney(wallets[1]
+											, Integer.parseInt(st.nextToken()));
+						}
 					}
 				}
 			}
