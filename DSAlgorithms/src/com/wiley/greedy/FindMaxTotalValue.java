@@ -10,12 +10,10 @@ public class FindMaxTotalValue {
 		Arrays.sort(items, new ItemComparator());
 		
 		  for(Item i:items) System.out.println(i);
-		 
+			int curr=0;
+			int ans=0;
 		
-		int curr=0;
-		int ans=0;
-		
-		for(int i=0;i<n-1;i++)
+		for(int i=0;i<n;i++)
 		{
 			if(curr+items[i].getWeight()<=capacity)
 			{
@@ -25,7 +23,9 @@ public class FindMaxTotalValue {
 			else
 			{
 				int rem=capacity-curr;
-				ans+=items[i].getValue()*(rem/items[i].getWeight());
+				int finalValue=(int)(items[i].getValue()*((float)rem/items[i].getWeight()));
+				ans=ans+finalValue-rem;
+
 				break;
 			}
 		}
@@ -36,10 +36,19 @@ public class FindMaxTotalValue {
 	public static void main(String[] args) {
 		
 		Item [] items=new Item[3];
-		items[2]=new Item(10,60);
-		items[0]=new Item(20,100);
-		items[1]=new Item(30,120);
+		items[0]=new Item(10,60);
+		items[1]=new Item(20,100);
+		items[2]=new Item(30,120);
 		System.out.println("Max Total Value : "+FindMaxTotalValue.kanpSack(items, 3, 50));
+		
+		System.out.println("====================================================");
+		Item [] items1=new Item[5];
+		items1[0]=new Item(10,60);
+		items1[1]=new Item(20,100);
+		items1[2]=new Item(30,120);
+		items1[3]=new Item(40,180);
+		items1[4]=new Item(50,210);
+		System.out.println("Max Total Value : "+FindMaxTotalValue.kanpSack(items1, 5, 120));
 	}
 
 }

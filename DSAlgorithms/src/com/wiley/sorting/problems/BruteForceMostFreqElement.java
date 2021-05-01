@@ -61,7 +61,7 @@ public static int frequentElement1(int a[],int n)
 		return temp;
 		
 	}
-	// using HashMap/HashTable + Stream
+	// using HashMap/HashTable + StreamO(n+m)
 	public static int frequentElement2(int a[],int n)
 	{
 		int temp=-1;
