@@ -24,6 +24,14 @@ class AllCaseRemoveBST
 		inorder(root.right);
 	}
 
+	 // Helper function to find the maximum value node in the subtree rooted at `ptr`
+    public static Node findMaximumKey(Node ptr)
+    {
+        while (ptr.right != null) {
+            ptr = ptr.right;
+        }
+        return ptr;
+    }
 	// Helper function to find minimum value node in the subtree rooted at `curr=node to be removed`
 	public static Node getMinimumKey(Node curr)
 	{
