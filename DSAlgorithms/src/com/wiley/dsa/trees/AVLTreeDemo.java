@@ -34,7 +34,7 @@ public class AVLTreeDemo {
 			return root;
 		
 		//find the middle element of the current array
-		
+		// DIVIDE AND CONQUER STRATEGIE
 		int mid=(low+high)/2; // narrowing conversion assigning floor value to mid
 		
 		root = new AVLNode(keys[mid]);
