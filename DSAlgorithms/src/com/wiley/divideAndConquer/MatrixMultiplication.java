@@ -2,7 +2,8 @@ package com.wiley.divideAndConquer;
 
 import java.util.Random;
 
-//strassen Algorithm
+//strassen Algorithm Divide And conquer
+
 public class MatrixMultiplication {
 
 	 Random r, r1;
