@@ -45,12 +45,14 @@ public class KNNRatingFloat {
 			for(int i=0; i<ratings.length; i++) {	//for all users
 				//HEURISTICS for similarity
 				//euclideanDist(ratings, num, i, user, sim, ssim);
+				
 				cosineSimilarity(ratings,i,num,user,sim,ssim);
 				
 			}
 
 		    Collections.sort(ssim, Collections.reverseOrder()); //from smaller to bigger
 		    //Collections.reverse(ssim); //descending
+		    
 		    int remove = ssim.size() - k;
 		    for (int i =0; i<remove;i++) {
 		    	ssim.remove(ssim.size()-1); //we want the k nearest neighbours to remain
